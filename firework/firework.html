@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        canvas {
+            display: block;
+        }
+
+        button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+    <title>Fireworks</title>
+</head>
+<body>
+    <canvas id="myCanvas" onclick="triggerFireworks()"></canvas>
+    <script src="firework.js"></script>
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        startFireworks(canvas, {
+            particleCount: 100,
+            particleSpeedMin: 2,
+            particleSpeedMax: 10,
+            particleGravity: 1,
+            particleDecayMin: 0.01,
+            particleDecayMax: 0.03,
+            fireworkColors: ['red', 'white', 'blue', 'gold', 'purple'],
+            particleAlphaMin: 0.5,
+            particleAlphaMax: 1.0
+        });
+    </script>
+</body>
+</html>
